@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Roadmap — CareerPath AI</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="/index.html" class="nav-logo">
+        <div class="nav-logo-icon">🧭</div>
+        <span>CareerPath <em>AI</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/explore.html">Explore Careers</a></li>
+        <li><a href="/resources.html">Resources</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <div class="nav-actions" id="navActions">
+        <a href="/login.html" class="btn btn-outline btn-sm" id="navLoginBtn">Login</a>
+        <a href="/signup.html" class="btn btn-primary btn-sm" id="navSignupBtn">Sign Up</a>
+        <div class="nav-user" id="navUserArea" style="display:none;">
+          <i class="fas fa-user-circle"></i>
+          <span>Welcome, <strong id="navUserName">User</strong></span>
+        </div>
+        <button class="btn btn-outline btn-sm" id="navLogoutBtn" style="display:none;" onclick="logout()">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Roadmap Creator -->
+  <div class="roadmap-page">
+    <div class="container">
+
+      <!-- Page Title -->
+      <div style="text-align:center;margin-bottom:48px;">
+        <div class="hero-badge" style="display:inline-flex;margin-bottom:16px;">
+          <i class="fas fa-magic"></i> <span>Roadmap Creator</span>
+        </div>
+        <h1>Create Your <span class="gradient-text">Personalized Roadmap</span></h1>
+        <p style="color:var(--text-secondary);margin-top:12px;">Answer 2 quick questions and get your AI-generated career roadmap.</p>
+      </div>
+
+      <!-- Progress Steps -->
+      <div class="progress-steps">
+        <div class="progress-step active" id="progressStep1">
+          <div class="progress-step-circle">1</div>
+          <div class="progress-step-label">Your Profile</div>
+        </div>
+        <div class="progress-connector" id="connector1"></div>
+        <div class="progress-step" id="progressStep2">
+          <div class="progress-step-circle">2</div>
+          <div class="progress-step-label">Interests</div>
+        </div>
+        <div class="progress-connector" id="connector2"></div>
+        <div class="progress-step" id="progressStep3">
+          <div class="progress-step-circle">3</div>
+          <div class="progress-step-label">Generate</div>
+        </div>
+      </div>
+
+      <!-- ───── STEP 1: Your Profile ───── -->
+      <div class="step-content active" id="roadmapStep1">
+        <div class="step-card-box">
+          <h2>Select Your <span class="gradient-text">Branch</span></h2>
+          <p>Which engineering branch are you currently studying?</p>
+
+          <div class="branch-options">
+            <label class="branch-option" data-value="Computer Science & Engineering">
+              <input type="radio" name="branch" value="Computer Science & Engineering" />
+              <div class="radio-indicator"></div>
+              <span>💻 Computer Science & Engineering (CSE)</span>
+            </label>
+            <label class="branch-option" data-value="Information Technology">
+              <input type="radio" name="branch" value="Information Technology" />
+              <div class="radio-indicator"></div>
+              <span>🖥️ Information Technology (IT)</span>
+            </label>
+            <label class="branch-option" data-value="Computer Engineering">
+              <input type="radio" name="branch" value="Computer Engineering" />
+              <div class="radio-indicator"></div>
+              <span>⚙️ Computer Engineering (CE)</span>
+            </label>
+            <label class="branch-option" data-value="Electronics & Communication">
+              <input type="radio" name="branch" value="Electronics & Communication" />
+              <div class="radio-indicator"></div>
+              <span>📡 Electronics & Communication (ECE)</span>
+            </label>
+            <label class="branch-option" data-value="Other Engineering">
+              <input type="radio" name="branch" value="Other Engineering" />
+              <div class="radio-indicator"></div>
+              <span>🎓 Other Engineering Branch</span>
+            </label>
+          </div>
+
+          <div class="step-actions">
+            <button class="btn btn-primary" id="step1Next">
+              Next <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───── STEP 2: Interests ───── -->
+      <div class="step-content" id="roadmapStep2">
+        <div class="step-card-box">
+          <h2>Choose Your <span class="gradient-text">Interests</span></h2>
+          <p>Select one or more technology areas that interest you. You can pick multiple!</p>
+
+          <div class="interests-grid">
+            <div class="interest-card" data-interest="Web Development">
+              <span class="interest-icon">🌐</span>
+              <span>Web Development</span>
+              <i class="fas fa-check-circle check-icon"></i>
+            </div>
+            <div class="interest-card" data-interest="AI / Machine Learning">
+              <span class="interest-icon">🤖</span>
+              <span>AI / Machine Learning</span>
+              <i class="fas fa-check-circle check-icon"></i>
+            </div>
+            <div class="interest-card" data-interest="Data Science">
+              <span class="interest-icon">📊</span>
+              <span>Data Science</span>
+              <i class="fas fa-check-circle check-icon"></i>
+            </div>
+            <div class="interest-card" data-interest="Cybersecurity">
+              <span class="interest-icon">🛡️</span>
+              <span>Cybersecurity</span>
+              <i class="fas fa-check-circle check-icon"></i>
+            </div>
+            <div class="interest-card" data-interest="App Development">
+              <span class="interest-icon">📱</span>
+              <span>App Development</span>
+              <i class="fas fa-check-circle check-icon"></i>
+            </div>
+            <div class="interest-card" data-interest="Cloud Computing">
+              <span class="interest-icon">☁️</span>
+              <span>Cloud Computing</span>
+              <i class="fas fa-check-circle check-icon"></i>
+            </div>
+            <div class="interest-card" data-interest="Competitive Programming">
+              <span class="interest-icon">🏆</span>
+              <span>Competitive Programming</span>
+              <i class="fas fa-check-circle check-icon"></i>
+            </div>
+            <div class="interest-card" data-interest="Game Development">
+              <span class="interest-icon">🎮</span>
+              <span>Game Development</span>
+              <i class="fas fa-check-circle check-icon"></i>
+            </div>
+          </div>
+
+          <div class="step-actions">
+            <button class="btn btn-outline" id="step2Back">
+              <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button class="btn btn-primary" id="step2Next">
+              Next <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ───── STEP 3: Generate ───── -->
+      <div class="step-content" id="roadmapStep3">
+        <div class="step-card-box">
+          <h2>Ready to <span class="gradient-text">Generate!</span></h2>
+          <p>Here's a summary of your selection. Click generate to get your roadmap.</p>
+
+          <div class="summary-box">
+            <div class="summary-item">
+              <div class="summary-label"><i class="fas fa-graduation-cap"></i> Selected Branch</div>
+              <div class="summary-value" id="summaryBranch">—</div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-label"><i class="fas fa-heart"></i> Selected Interests</div>
+              <div class="summary-tags" id="summaryInterests"></div>
+            </div>
+          </div>
+
+          <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:8px;">
+            <i class="fas fa-info-circle"></i> Your personalized roadmap will include learning stages, skills to master, projects to build, and career preparation tips.
+          </p>
+
+          <div class="step-actions">
+            <button class="btn btn-outline" id="step3Back">
+              <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button class="btn btn-primary btn-lg" id="generateBtn">
+              <i class="fas fa-magic"></i> Generate My Roadmap
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2024 CareerPath AI</span>
+        <a href="/index.html" style="color:var(--purple-light);">Back to Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

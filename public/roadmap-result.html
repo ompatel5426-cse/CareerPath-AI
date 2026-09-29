@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Roadmap — CareerPath AI</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="/index.html" class="nav-logo">
+        <div class="nav-logo-icon">🧭</div>
+        <span>CareerPath <em>AI</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/explore.html">Explore Careers</a></li>
+        <li><a href="/resources.html">Resources</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <div class="nav-actions" id="navActions">
+        <a href="/login.html" class="btn btn-outline btn-sm" id="navLoginBtn">Login</a>
+        <a href="/signup.html" class="btn btn-primary btn-sm" id="navSignupBtn">Sign Up</a>
+        <div class="nav-user" id="navUserArea" style="display:none;">
+          <i class="fas fa-user-circle"></i>
+          <span>Welcome, <strong id="navUserName">User</strong></span>
+        </div>
+        <button class="btn btn-outline btn-sm" id="navLogoutBtn" style="display:none;" onclick="logout()">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Result Page -->
+  <div class="result-page">
+    <div class="container">
+
+      <!-- Result Header -->
+      <div class="result-header">
+        <div class="hero-badge" style="display:inline-flex;margin-bottom:16px;">
+          <i class="fas fa-check-circle" style="color:#4ade80;"></i>
+          <span>Roadmap Generated!</span>
+        </div>
+        <h1>Your Personalized <span class="gradient-text">Career Roadmap</span></h1>
+        <p style="color:var(--text-secondary);margin-top:12px;max-width:600px;margin-left:auto;margin-right:auto;">
+          Follow these stages to build the skills you need for your chosen career path.
+        </p>
+
+        <!-- Meta info -->
+        <div class="result-meta">
+          <div class="badge" style="font-size:0.85rem;padding:8px 16px;">
+            <i class="fas fa-graduation-cap" style="margin-right:6px;"></i>
+            Branch: <strong id="resultBranch">—</strong>
+          </div>
+          <div class="badge" style="font-size:0.85rem;padding:8px 16px;background:rgba(59,130,246,0.15);color:var(--blue-light);border-color:rgba(59,130,246,0.3);">
+            <i class="fas fa-calendar-alt" style="margin-right:6px;"></i>
+            <span id="resultDate">—</span>
+          </div>
+        </div>
+
+        <!-- Interest Tags -->
+        <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:16px;" id="resultInterests"></div>
+      </div>
+
+      <!-- Roadmap Content -->
+      <div id="roadmapLoading" style="text-align:center;padding:40px;display:none;">
+        <div style="width:48px;height:48px;border:3px solid rgba(139,92,246,0.2);border-top-color:var(--purple);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 16px;"></div>
+        <p style="color:var(--text-secondary);">Loading your roadmap...</p>
+      </div>
+      <div id="roadmapResult"></div>
+
+      <!-- Action Buttons -->
+      <div class="result-actions">
+        <button class="btn btn-outline" id="editRoadmapBtn">
+          <i class="fas fa-edit"></i> Edit Roadmap
+        </button>
+        <button class="btn btn-ghost" id="printRoadmapBtn">
+          <i class="fas fa-print"></i> Print Roadmap
+        </button>
+        <button class="btn btn-primary" id="shareRoadmapBtn">
+          <i class="fas fa-share-alt"></i> Share Roadmap
+        </button>
+      </div>
+
+      <!-- Resources CTA -->
+      <div style="text-align:center;margin-top:48px;padding:32px;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-lg);">
+        <h3>Need Learning Resources?</h3>
+        <p style="color:var(--text-secondary);margin:12px 0 20px;">Browse our curated collection of courses, docs, and tools to help you follow your roadmap.</p>
+        <a href="/resources.html" class="btn btn-primary">
+          <i class="fas fa-book-open"></i> Browse Resources
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2024 CareerPath AI</span>
+        <a href="/roadmap.html" style="color:var(--purple-light);">Create New Roadmap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

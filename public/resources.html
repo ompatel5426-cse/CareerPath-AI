@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources — CareerPath AI</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="/index.html" class="nav-logo">
+        <div class="nav-logo-icon">🧭</div>
+        <span>CareerPath <em>AI</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/explore.html">Explore Careers</a></li>
+        <li><a href="/resources.html">Resources</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <div class="nav-actions" id="navActions">
+        <a href="/login.html" class="btn btn-outline btn-sm" id="navLoginBtn">Login</a>
+        <a href="/signup.html" class="btn btn-primary btn-sm" id="navSignupBtn">Sign Up</a>
+        <div class="nav-user" id="navUserArea" style="display:none;">
+          <i class="fas fa-user-circle"></i>
+          <span>Welcome, <strong id="navUserName">User</strong></span>
+        </div>
+        <button class="btn btn-outline btn-sm" id="navLogoutBtn" style="display:none;" onclick="logout()">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="hero-badge" style="display:inline-flex;margin-bottom:16px;">
+        <i class="fas fa-book-open"></i> <span>Learning Resources</span>
+      </div>
+      <h1>Curated <span class="gradient-text">Resources</span></h1>
+      <p style="max-width:600px;margin:16px auto 0;font-size:1.1rem;">
+        Hand-picked courses, documentation, platforms and tools to accelerate your learning.
+      </p>
+    </div>
+  </div>
+
+  <!-- Search & Filter -->
+  <section class="section" style="padding-top:24px;">
+    <div class="container">
+      <div class="search-filter-bar">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="resourceSearch" placeholder="Search resources..." />
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="programming">Programming</button>
+          <button class="filter-tab" data-filter="webdev">Web Dev</button>
+          <button class="filter-tab" data-filter="aiml">AI/ML</button>
+          <button class="filter-tab" data-filter="datascience">Data Science</button>
+          <button class="filter-tab" data-filter="security">Cybersecurity</button>
+          <button class="filter-tab" data-filter="cloud">Cloud</button>
+          <button class="filter-tab" data-filter="git">Git/GitHub</button>
+        </div>
+      </div>
+
+      <!-- Resources Grid -->
+      <div class="grid-3" id="resourcesGrid">
+
+        <!-- FreeCodeCamp -->
+        <div class="resource-item"><div class="resource-card" data-category="webdev">
+          <div class="resource-header">
+            <div class="resource-type-icon course"><i class="fas fa-laptop-code"></i></div>
+            <div>
+              <h3>freeCodeCamp</h3>
+              <span class="badge">Free</span>
+            </div>
+          </div>
+          <p>Learn web development step by step — HTML, CSS, JavaScript, React, Node.js and more with interactive coding challenges.</p>
+          <div class="resource-footer">
+            <span class="tag">Web Development</span>
+            <a href="https://www.freecodecamp.org" target="_blank" class="btn btn-ghost btn-sm">
+              <i class="fas fa-external-link-alt"></i> Open
+            </a>
+          </div>
+        </div></div>
+
+        <!-- MDN Web Docs -->
+        <div class="resource-item"><div class="resource-card" data-category="webdev">
+          <div class="resource-header">
+            <div class="resource-type-icon docs"><i class="fas fa-book"></i></div>
+            <div>
+              <h3>MDN Web Docs</h3>
+              <span class="badge">Free</span>
+            </div>
+          </div>
+          <p>The definitive reference for HTML, CSS, and JavaScript. Trusted by millions of developers worldwide.</p>
+          <div class="resource-footer">
+            <span class="tag">Web Dev</span>
+            <a href="https://developer.mozilla.org" target="_blank" class="btn btn-ghost btn-sm">
+              <i class="fas fa-external-link-alt"></i> Open
+            </a>
+          </div>
+        </div></div>
+
+        <!-- Coursera ML -->
+        <div class="resource-item"><div class="resource-card" data-category="aiml">
+          <div class="resource-header">
+            <div class="resource-type-icon course"><i class="fas fa-brain"></i></div>
+            <div>
+              <h3>Coursera — ML by Andrew Ng</h3>
+              <span class="badge">Paid/Audit</span>
+            </div>
+          </div>
+          <p>The world's most popular machine learning course by Stanford's Andrew Ng. Covers regression, neural networks, and more.</p>
+          <div class="resource-footer">
+            <span class="tag">AI/ML</span>
+            <a href="https://www.coursera.org/learn/machine-learning" target="_blank" class="btn btn-ghost btn-sm">
+              <i class="fas fa-external-link-alt"></i> Open
+            </a>
+          </div>
+        </div></div>
+
+        <!-- Kaggle -->
+        <div class="resource-item"><div class="resource-card" data-category="datascience">
+          <div class="resource-header">
+            <div class="resource-type-icon platform"><i class="fas fa-chart-bar"></i></div>
+            <div>
+              <h3>Kaggle</h3>
+              <span class="badge">Free</span>
+            </div>
+          </div>
+          <p>Learn data science and ML through real-world datasets, competitions, and free micro-courses. Great for building your portfolio.</p>
+          <div class="resource-footer">
+            <span class="tag">Data Science</span>
+            <a href="https://www.kaggle.com" target="_blank" class="btn btn-ghost btn-sm">
+              <i class="fas fa-external-link-alt"></i> Open
+            </a>
+          </div>
+        </div></div>
+
+        <!-- TryHackMe -->
+        <div class="resource-item"><div class="resource-card" data-category="security">
+          <div class="resource-header">
+            <div class="resource-type-icon tool"><i class="fas fa-shield-alt"></i></div>
+            <div>
+              <h3>TryHackMe</h3>
+              <span class="badge">Free Tier</span>
+            </div>
+          </div>
+          <p>Learn cybersecurity through hands-on labs, CTF challenges, and guided learning paths. Ideal for beginners.</p>
+          <div class="resource-footer">
+            <span class="tag">Cybersecurity</span>
+            <a href="https://tryhackme.com" target="_blank" class="btn btn-ghost btn-sm">
+              <i class="fas fa-external-link-alt"></i> Open
+            </a>
+          </div>
+        </div></div>
+
+        <!-- AWS Training -->
+        <div class="resource-item"><div class="resource-card" data-category="cloud">
+          <div class="resource-header">
+            <div class="resource-type-icon course"><i class="fab fa-aws"></i></div>
+            <div>
+              <h3>AWS Training & Certification</h3>
+              <span class="badge">Free Tier</span>
+            </div>
+          </div>
+          <p>Official AWS learning platform. Start with AWS Cloud Practitioner Essentials and work towards certifications.</p>
+          <div class="resource-footer">
+            <span class="tag">Cloud Computing</span>
+            <a href="https://aws.amazon.com/training/" target="_blank" class="btn btn-ghost btn-sm">
+              <i class="fas fa-external-link-alt"></i> Open
+            </a>
+          </div>
+        </div></div>
+
+        <!-- LeetCode -->
+        <div class="resource-item"><div class="resource-card" data-category="programming">
+          <div class="resource-header">
+            <div class="resource-type-icon platform"><i class="fas fa-code"></i></div>
+            <div>
+              <h3>LeetCode</h3>
+              <span class="badge">Free/Pro</span>
+            </div>
+          </div>
+          <p>Practice data structures and algorithms with 2000+ coding problems. Essential for FAANG and tech company placements.</p>
+          <div class="resource-footer">
+            <span class="tag">Programming</span>
+            <a href="https://leetcode.com" target="_blank" class="btn btn-ghost btn-sm">
+              <i class="fas fa-external-link-alt"></i> Open
+            </a>
+          </div>
+        </div></div>
+
+        <!-- GitHub Learning -->
+        <div class="resource-item"><div class="resource-card" data-category="git">
+          <div class="resource-header">
+            <div class="resource-type-icon docs"><i class="fab fa-github"></i></div>
+            <div>
+              <h3>GitHub Learning Lab</h3>
+              <span class="badge">Free</span>
+            </div>
+          </div>
+          <p>Learn Git and GitHub through hands-on projects directly within your GitHub account. Master version control.</p>
+          <div class="resource-footer">
+            <span class="tag">Git/GitHub</span>
+            <a href="https://github.com/skills" target="_blank" class="btn btn-ghost btn-sm">
+              <i class="fas fa-external-link-alt"></i> Open
+            </a>
+          </div>
+        </div></div>
+
+        <!-- Python Docs -->
+        <div class="resource-item"><div class="resource-card" data-category="programming">
+          <div class="resource-header">
+            <div class="resource-type-icon docs"><i class="fab fa-python"></i></div>
+            <div>
+              <h3>Python Official Docs</h3>
+              <span class="badge">Free</span>
+            </div>
+          </div>
+          <p>The official Python documentation — language reference, tutorials, and library references for all skill levels.</p>
+          <div class="resource-footer">
+            <span class="tag">Programming</span>
+            <a href="https://docs.python.org/3/" target="_blank" class="btn btn-ghost btn-sm">
+              <i class="fas fa-external-link-alt"></i> Open
+            </a>
+          </div>
+        </div></div>
+
+        <!-- The Odin Project -->
+        <div class="resource-item"><div class="resource-card" data-category="webdev">
+          <div class="resource-header">
+            <div class="resource-type-icon course"><i class="fas fa-globe"></i></div>
+            <div>
+              <h3>The Odin Project</h3>
+              <span class="badge">Free</span>
+            </div>
+          </div>
+          <p>A full-stack web development curriculum that's completely free and open source. Great structured learning path.</p>
+          <div class="resource-footer">
+            <span class="tag">Web Dev</span>
+            <a href="https://www.theodinproject.com" target="_blank" class="btn btn-ghost btn-sm">
+              <i class="fas fa-external-link-alt"></i> Open
+            </a>
+          </div>
+        </div></div>
+
+        <!-- Fast.ai -->
+        <div class="resource-item"><div class="resource-card" data-category="aiml">
+          <div class="resource-header">
+            <div class="resource-type-icon video"><i class="fas fa-robot"></i></div>
+            <div>
+              <h3>fast.ai Deep Learning</h3>
+              <span class="badge">Free</span>
+            </div>
+          </div>
+          <p>Practical deep learning for coders. Top-down, hands-on approach to learning neural networks and modern AI.</p>
+          <div class="resource-footer">
+            <span class="tag">AI/ML</span>
+            <a href="https://www.fast.ai" target="_blank" class="btn btn-ghost btn-sm">
+              <i class="fas fa-external-link-alt"></i> Open
+            </a>
+          </div>
+        </div></div>
+
+        <!-- OverTheWire -->
+        <div class="resource-item"><div class="resource-card" data-category="security">
+          <div class="resource-header">
+            <div class="resource-type-icon tool"><i class="fas fa-terminal"></i></div>
+            <div>
+              <h3>OverTheWire Wargames</h3>
+              <span class="badge">Free</span>
+            </div>
+          </div>
+          <p>Learn Linux, security, and hacking concepts by playing security wargames. Bandit is a great starting point.</p>
+          <div class="resource-footer">
+            <span class="tag">Cybersecurity</span>
+            <a href="https://overthewire.org/wargames/" target="_blank" class="btn btn-ghost btn-sm">
+              <i class="fas fa-external-link-alt"></i> Open
+            </a>
+          </div>
+        </div></div>
+
+      </div>
+
+      <!-- No results state -->
+      <div class="no-results" id="noResults">
+        <i class="fas fa-search" style="font-size:48px;opacity:0.3;display:block;margin-bottom:16px;"></i>
+        <h3 style="color:var(--text-muted);">No resources found</h3>
+        <p>Try searching for something else.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2024 CareerPath AI</span>
+        <a href="/index.html" style="color:var(--purple-light);">Back to Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

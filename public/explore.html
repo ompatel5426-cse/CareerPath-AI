@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Careers — CareerPath AI</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="/index.html" class="nav-logo">
+        <div class="nav-logo-icon">🧭</div>
+        <span>CareerPath <em>AI</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/explore.html">Explore Careers</a></li>
+        <li><a href="/resources.html">Resources</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <div class="nav-actions" id="navActions">
+        <a href="/login.html" class="btn btn-outline btn-sm" id="navLoginBtn">Login</a>
+        <a href="/signup.html" class="btn btn-primary btn-sm" id="navSignupBtn">Sign Up</a>
+        <div class="nav-user" id="navUserArea" style="display:none;">
+          <i class="fas fa-user-circle"></i>
+          <span>Welcome, <strong id="navUserName">User</strong></span>
+        </div>
+        <button class="btn btn-outline btn-sm" id="navLogoutBtn" style="display:none;" onclick="logout()">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="hero-badge" style="display:inline-flex;margin-bottom:16px;">
+        <i class="fas fa-compass"></i> <span>Career Explorer</span>
+      </div>
+      <h1>Explore <span class="gradient-text">Career Paths</span></h1>
+      <p style="max-width:600px;margin:16px auto 0;font-size:1.1rem;">
+        Browse top technology career fields and find the one that excites you.
+      </p>
+    </div>
+  </div>
+
+  <!-- Search & Filter -->
+  <section class="section" style="padding-top:24px;">
+    <div class="container">
+      <div class="search-filter-bar">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="careerSearch" placeholder="Search career paths, skills, technologies..." />
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="development">Development</button>
+          <button class="filter-tab" data-filter="ai">AI</button>
+          <button class="filter-tab" data-filter="data">Data</button>
+          <button class="filter-tab" data-filter="security">Security</button>
+          <button class="filter-tab" data-filter="cloud">Cloud</button>
+          <button class="filter-tab" data-filter="programming">Programming</button>
+        </div>
+      </div>
+
+      <!-- Career Cards Grid -->
+      <div class="grid-3" id="careersGrid">
+
+        <!-- Web Development -->
+        <div><div class="career-card" data-category="development">
+          <div class="career-icon">🌐</div>
+          <h3>Web Development</h3>
+          <p>Build modern, responsive websites and full-stack web applications using cutting-edge frameworks and tools.</p>
+          <div class="career-skills">
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+          </div>
+          <div style="margin-top:8px;">
+            <span class="badge">High Demand</span>
+          </div>
+          <a href="/roadmap.html" class="btn btn-primary btn-sm" style="margin-top:12px;">
+            <i class="fas fa-map"></i> Explore Path
+          </a>
+        </div></div>
+
+        <!-- AI / ML -->
+        <div><div class="career-card" data-category="ai">
+          <div class="career-icon">🤖</div>
+          <h3>AI / Machine Learning</h3>
+          <p>Design intelligent systems that learn from data, recognize patterns, and make smart decisions autonomously.</p>
+          <div class="career-skills">
+            <span class="tag">Python</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">Deep Learning</span>
+          </div>
+          <div style="margin-top:8px;">
+            <span class="badge">Future-Proof</span>
+          </div>
+          <a href="/roadmap.html" class="btn btn-primary btn-sm" style="margin-top:12px;">
+            <i class="fas fa-map"></i> Explore Path
+          </a>
+        </div></div>
+
+        <!-- Data Science -->
+        <div><div class="career-card" data-category="data">
+          <div class="career-icon">📊</div>
+          <h3>Data Science</h3>
+          <p>Analyze large datasets, extract insights, and drive business decisions using statistical methods and visualization.</p>
+          <div class="career-skills">
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Tableau</span>
+            <span class="tag">Statistics</span>
+          </div>
+          <div style="margin-top:8px;">
+            <span class="badge">High Salary</span>
+          </div>
+          <a href="/roadmap.html" class="btn btn-primary btn-sm" style="margin-top:12px;">
+            <i class="fas fa-map"></i> Explore Path
+          </a>
+        </div></div>
+
+        <!-- Cybersecurity -->
+        <div><div class="career-card" data-category="security">
+          <div class="career-icon">🛡️</div>
+          <h3>Cybersecurity</h3>
+          <p>Protect organizations from hackers, secure networks, and identify system vulnerabilities through ethical hacking.</p>
+          <div class="career-skills">
+            <span class="tag">Linux</span>
+            <span class="tag">Networking</span>
+            <span class="tag">Ethical Hacking</span>
+            <span class="tag">Cryptography</span>
+          </div>
+          <div style="margin-top:8px;">
+            <span class="badge">Critical Role</span>
+          </div>
+          <a href="/roadmap.html" class="btn btn-primary btn-sm" style="margin-top:12px;">
+            <i class="fas fa-map"></i> Explore Path
+          </a>
+        </div></div>
+
+        <!-- App Development -->
+        <div><div class="career-card" data-category="development">
+          <div class="career-icon">📱</div>
+          <h3>App Development</h3>
+          <p>Create native and cross-platform mobile applications for Android and iOS that reach millions of users.</p>
+          <div class="career-skills">
+            <span class="tag">Flutter</span>
+            <span class="tag">React Native</span>
+            <span class="tag">Kotlin</span>
+            <span class="tag">Firebase</span>
+          </div>
+          <div style="margin-top:8px;">
+            <span class="badge">Growing Market</span>
+          </div>
+          <a href="/roadmap.html" class="btn btn-primary btn-sm" style="margin-top:12px;">
+            <i class="fas fa-map"></i> Explore Path
+          </a>
+        </div></div>
+
+        <!-- Cloud Computing -->
+        <div><div class="career-card" data-category="cloud">
+          <div class="career-icon">☁️</div>
+          <h3>Cloud Computing</h3>
+          <p>Manage scalable cloud infrastructure on AWS, Azure, and GCP. Deploy modern containerized applications.</p>
+          <div class="career-skills">
+            <span class="tag">AWS</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Terraform</span>
+          </div>
+          <div style="margin-top:8px;">
+            <span class="badge">Cloud Era</span>
+          </div>
+          <a href="/roadmap.html" class="btn btn-primary btn-sm" style="margin-top:12px;">
+            <i class="fas fa-map"></i> Explore Path
+          </a>
+        </div></div>
+
+        <!-- Competitive Programming -->
+        <div><div class="career-card" data-category="programming">
+          <div class="career-icon">🏆</div>
+          <h3>Competitive Programming</h3>
+          <p>Master algorithms, data structures, and problem-solving for coding contests and top company placements.</p>
+          <div class="career-skills">
+            <span class="tag">C++ STL</span>
+            <span class="tag">Algorithms</span>
+            <span class="tag">LeetCode</span>
+            <span class="tag">Codeforces</span>
+          </div>
+          <div style="margin-top:8px;">
+            <span class="badge">Placement Edge</span>
+          </div>
+          <a href="/roadmap.html" class="btn btn-primary btn-sm" style="margin-top:12px;">
+            <i class="fas fa-map"></i> Explore Path
+          </a>
+        </div></div>
+
+        <!-- Game Development -->
+        <div><div class="career-card" data-category="development">
+          <div class="career-icon">🎮</div>
+          <h3>Game Development</h3>
+          <p>Design and build engaging games using Unity, Unreal Engine with 2D/3D graphics and interactive gameplay.</p>
+          <div class="career-skills">
+            <span class="tag">Unity</span>
+            <span class="tag">C#</span>
+            <span class="tag">Unreal Engine</span>
+            <span class="tag">Game Design</span>
+          </div>
+          <div style="margin-top:8px;">
+            <span class="badge">Creative Tech</span>
+          </div>
+          <a href="/roadmap.html" class="btn btn-primary btn-sm" style="margin-top:12px;">
+            <i class="fas fa-map"></i> Explore Path
+          </a>
+        </div></div>
+
+      </div>
+
+      <!-- No results state -->
+      <div class="no-results" id="noResults">
+        <i class="fas fa-search" style="font-size:48px;opacity:0.3;display:block;margin-bottom:16px;"></i>
+        <h3 style="color:var(--text-muted);">No careers found</h3>
+        <p>Try a different search term or filter.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" style="padding-top:0;">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Found Your <span class="gradient-text">Interest?</span></h2>
+        <p>Now generate your personalized step-by-step learning roadmap tailored just for you.</p>
+        <a href="/roadmap.html" class="btn btn-primary btn-lg">
+          <i class="fas fa-magic"></i> Generate My Roadmap
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2024 CareerPath AI. All rights reserved.</span>
+        <a href="/index.html" style="color:var(--purple-light);">Back to Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

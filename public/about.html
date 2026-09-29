@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — CareerPath AI</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="/index.html" class="nav-logo">
+        <div class="nav-logo-icon">🧭</div>
+        <span>CareerPath <em>AI</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/explore.html">Explore Careers</a></li>
+        <li><a href="/resources.html">Resources</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <div class="nav-actions" id="navActions">
+        <a href="/login.html" class="btn btn-outline btn-sm" id="navLoginBtn">Login</a>
+        <a href="/signup.html" class="btn btn-primary btn-sm" id="navSignupBtn">Sign Up</a>
+        <div class="nav-user" id="navUserArea" style="display:none;">
+          <i class="fas fa-user-circle"></i>
+          <span>Welcome, <strong id="navUserName">User</strong></span>
+        </div>
+        <button class="btn btn-outline btn-sm" id="navLogoutBtn" style="display:none;" onclick="logout()">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="hero-badge" style="display:inline-flex;margin-bottom:16px;">
+        <i class="fas fa-info-circle"></i> <span>About Us</span>
+      </div>
+      <h1>About <span class="gradient-text">CareerPath AI</span></h1>
+      <p style="max-width:600px;margin:16px auto 0;font-size:1.1rem;">
+        "Your AI-powered roadmap to the right career."
+      </p>
+    </div>
+  </div>
+
+  <!-- Mission Section -->
+  <section class="section" style="padding-top:40px;">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <span class="badge" style="margin-bottom:16px;">Our Mission</span>
+          <h2>Empowering Students to <span class="gradient-text">Choose Right</span></h2>
+          <p style="margin-top:16px;font-size:1rem;line-height:1.8;">
+            CareerPath AI was built with a single mission: to help every engineering and computer science student navigate the overwhelming world of technology careers.
+          </p>
+          <p style="margin-top:12px;font-size:1rem;line-height:1.8;">
+            Too many students graduate without a clear direction. We solve this by providing personalized, AI-generated learning roadmaps that are practical, achievable, and tailored to each student's background and interests.
+          </p>
+          <div style="margin-top:28px;">
+            <a href="/roadmap.html" class="btn btn-primary">
+              <i class="fas fa-rocket"></i> Start Your Journey
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="card" style="padding:36px;">
+            <div style="font-size:3rem;margin-bottom:16px;">🎯</div>
+            <h3>What We Provide</h3>
+            <div class="feature-list">
+              <div class="feature-item">
+                <i class="fas fa-map-signs"></i>
+                <div>
+                  <strong style="color:var(--text-primary);">Personalized Roadmaps</strong>
+                  <p style="font-size:0.875rem;margin-top:4px;">Step-by-step learning paths based on your branch and interests.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-compass"></i>
+                <div>
+                  <strong style="color:var(--text-primary);">Career Exploration</strong>
+                  <p style="font-size:0.875rem;margin-top:4px;">Detailed info on 8+ tech career fields with skills and tools.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-book-open"></i>
+                <div>
+                  <strong style="color:var(--text-primary);">Curated Resources</strong>
+                  <p style="font-size:0.875rem;margin-top:4px;">Hand-picked courses, platforms, and documentation links.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                  <strong style="color:var(--text-primary);">Secure & Private</strong>
+                  <p style="font-size:0.875rem;margin-top:4px;">Your data is safe. We never share or sell your information.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why CareerPath AI -->
+  <section class="section" style="background:var(--bg-secondary);padding:80px 0;">
+    <div class="container">
+      <h2 class="section-title">Why <span class="gradient-text">CareerPath AI?</span></h2>
+      <p class="section-subtitle">We solve the problems that every student faces when planning their career.</p>
+
+      <div class="grid-3">
+        <div class="card" style="text-align:center;">
+          <div style="font-size:2.5rem;margin-bottom:16px;">😕</div>
+          <h3 style="color:#f87171;margin-bottom:8px;">The Problem</h3>
+          <p>Students spend months researching what skills to learn, in what order, with no clear guidance.</p>
+        </div>
+        <div class="card" style="text-align:center;border-color:rgba(139,92,246,0.4);">
+          <div style="font-size:2.5rem;margin-bottom:16px;">🧭</div>
+          <h3 style="color:var(--purple-light);margin-bottom:8px;">Our Solution</h3>
+          <p>CareerPath AI generates a structured, personalized roadmap in seconds — based on your specific background.</p>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div style="font-size:2.5rem;margin-bottom:16px;">🚀</div>
+          <h3 style="color:#4ade80;margin-bottom:8px;">The Result</h3>
+          <p>Students learn faster, stay focused, and land better jobs and internships with clear direction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Student Benefits -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Student <span class="gradient-text">Benefits</span></h2>
+      <p class="section-subtitle">Everything you need to kickstart your tech career journey.</p>
+
+      <div class="benefit-cards">
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+          <h3>Save Time</h3>
+          <p>Stop spending hours researching. Get a complete learning plan in under 2 minutes.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-bullseye"></i></div>
+          <h3>Stay Focused</h3>
+          <p>Follow a structured path instead of jumping between random tutorials and courses.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-sliders-h"></i></div>
+          <h3>Personalized</h3>
+          <p>Your roadmap is customized to your branch and specific career interests — not generic.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-project-diagram"></i></div>
+          <h3>Project Ideas</h3>
+          <p>Get project suggestions at every stage to build a strong portfolio for placements.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-briefcase"></i></div>
+          <h3>Placement Ready</h3>
+          <p>Roadmaps include job prep stages: DSA, system design, mock interviews, and resume tips.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-infinity"></i></div>
+          <h3>Free Forever</h3>
+          <p>CareerPath AI is free for all students. No paywalls, no hidden costs — ever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Ready to Start Your <span class="gradient-text">Journey?</span></h2>
+        <p>Join students who are building their future with a clear, personalized career roadmap.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+          <a href="/signup.html" class="btn btn-primary btn-lg">
+            <i class="fas fa-user-plus"></i> Create Account
+          </a>
+          <a href="/explore.html" class="btn btn-outline btn-lg">
+            <i class="fas fa-compass"></i> Explore Careers
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/index.html" class="nav-logo">
+            <div class="nav-logo-icon">🧭</div>
+            <span>CareerPath <em>AI</em></span>
+          </a>
+          <p>Your AI-powered roadmap to the right career.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/explore.html">Explore</a></li>
+            <li><a href="/roadmap.html">Roadmap</a></li>
+            <li><a href="/resources.html">Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="/login.html">Login</a></li>
+            <li><a href="/signup.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <ul>
+            <li><a href="/about.html">Our Mission</a></li>
+            <li><a href="/about.html">Why CareerPath</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 CareerPath AI. Built for students.</span>
+        <span>Made with ❤️ for education</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

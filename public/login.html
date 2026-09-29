@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — CareerPath AI</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="/index.html" class="nav-logo">
+        <div class="nav-logo-icon">🧭</div>
+        <span>CareerPath <em>AI</em></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/explore.html">Explore Careers</a></li>
+        <li><a href="/resources.html">Resources</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <div class="nav-actions" id="navActions">
+        <a href="/login.html" class="btn btn-outline btn-sm" id="navLoginBtn">Login</a>
+        <a href="/signup.html" class="btn btn-primary btn-sm" id="navSignupBtn">Sign Up</a>
+        <div class="nav-user" id="navUserArea" style="display:none;">
+          <i class="fas fa-user-circle"></i>
+          <span>Welcome, <strong id="navUserName">User</strong></span>
+        </div>
+        <button class="btn btn-outline btn-sm" id="navLogoutBtn" style="display:none;" onclick="logout()">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Login Form -->
+  <div class="form-page">
+    <div class="auth-card">
+
+      <div class="auth-card-header">
+        <div class="auth-icon">
+          <i class="fas fa-sign-in-alt"></i>
+        </div>
+        <h2>Welcome Back</h2>
+        <p>Sign in to your CareerPath AI account</p>
+      </div>
+
+      <!-- Alert Banner -->
+      <div class="alert" id="loginAlert"></div>
+
+      <!-- Login Form -->
+      <form id="loginForm" novalidate>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="loginEmail">Email Address</label>
+          <div class="input-wrapper">
+            <i class="fas fa-envelope input-icon"></i>
+            <input
+              type="email"
+              id="loginEmail"
+              name="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <div class="form-error" id="loginEmailError"></div>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <div class="input-wrapper">
+            <i class="fas fa-lock input-icon"></i>
+            <input
+              type="password"
+              id="loginPassword"
+              name="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            />
+            <button type="button" class="toggle-password" id="toggleLoginPassword" aria-label="Toggle password">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <div class="form-error" id="loginPasswordError"></div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-full btn-lg" id="loginSubmitBtn">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+
+      </form>
+
+      <div class="form-footer">
+        Don't have an account?
+        <a href="/signup.html">Create one here</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+{
+  "users": [
+    {
+      "id": "b06a02ae-0288-4c9d-9266-23ed973ff2b4",
+      "name": "Om Patel",
+      "email": "omp1234@gmain.com",
+      "passwordHash": "$2a$10$lNREWgHa5yGzC5oSyaaKxumyi/bhQkJR1ptwm6ttNAKVG6iSEhOOK",
+      "createdAt": "2026-09-17T17:05:54.136Z"
+    },
+    {
+      "id": "001b9bfe-7580-46f2-87a3-9dbd276c484d",
+      "name": "Nil patel",
+      "email": "nilpatel21@gmail.com",
+      "passwordHash": "$2a$10$tYfMH7oHx3MBYITVI0F33Os9qejDnh9G7dkwjR/1uXZ9zWMDvPite",
+      "createdAt": "2026-09-29T17:08:58.480Z"
+    }
+  ],
+  "roadmaps": [
+    {
+      "id": "8c27b6cc-a5ba-4243-85cf-9ce44b9131e6",
+      "userId": "b06a02ae-0288-4c9d-9266-23ed973ff2b4",
+      "userName": "Om Patel",
+      "branch": "Computer Science & Engineering",
+      "interests": [
+        "Data Science"
+      ],
+      "roadmap": [
+        {
+          "title": "Stage 1: Programming Fundamentals",
+          "description": "Build a solid foundation in programming logic and computer science basics.",
+          "skills": [
+            "C / C++ Basics",
+            "Data Structures",
+            "Algorithms",
+            "Problem Solving",
+            "Git & GitHub",
+            "Linux Basics"
+          ]
+        },
+        {
+          "title": "Stage 2: Core Technologies",
+          "description": "Master the core technologies for your selected paths: Data Science.",
+          "skills": [
+            "Python",
+            "SQL",
+            "Excel/Sheets",
+            "Pandas & NumPy",
+            "Data Visualization"
+          ]
+        },
+        {
+          "title": "Stage 3: Build Projects",
+          "description": "Apply your skills by building real-world projects. Projects are essential for your portfolio.",
+          "skills": [
+            "Sales Dashboard",
+            "EDA Project",
+            "Predictive Analytics",
+            "Data Pipeline"
+          ]
+        },
+        {
+          "title": "Stage 4: Advanced Skills",
+          "description": "Level up with advanced concepts and industry-level tools.",
+          "skills": [
+            "Power BI / Tableau",
+            "Machine Learning",
+            "Big Data (Spark)",
+            "Statistical Analysis"
+          ]
+        },
+        {
+          "title": "Stage 5: Internship & Portfolio",
+          "description": "Build a professional portfolio and gain real experience through internships.",
+          "skills": [
+            "Create GitHub Portfolio",
+            "Build Personal Website",
+            "Write Technical Blog Posts",
+            "Contribute to Open Source",
+            "Apply for Internships",
+            "LinkedIn Profile Optimization",
+            "Build 3-5 Showcase Projects"
+          ]
+        },
+        {
+          "title": "Stage 6: Job Preparation",
+          "description": "Prepare for placements and job applications with targeted preparation.",
+          "skills": [
+            "DSA Practice (LeetCode/HackerRank)",
+            "System Design Basics",
+            "Mock Interviews",
+            "Resume Building",
+            "Aptitude & Reasoning",
+            "Communication Skills",
+            "Company-Specific Preparation",
+            "Networking & Referrals"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-17T17:08:17.840Z"
+    },
+    {
+      "id": "8389c36e-259e-4437-a54c-e35af5dcd3b9",
+      "userId": "001b9bfe-7580-46f2-87a3-9dbd276c484d",
+      "userName": "Nil patel",
+      "branch": "Computer Science & Engineering",
+      "interests": [
+        "Web Development",
+        "Data Science",
+        "AI / Machine Learning",
+        "Cybersecurity"
+      ],
+      "roadmap": [
+        {
+          "title": "Stage 1: Programming Fundamentals",
+          "description": "Build a solid foundation in programming logic and computer science basics.",
+          "skills": [
+            "C / C++ Basics",
+            "Data Structures",
+            "Algorithms",
+            "Problem Solving",
+            "Git & GitHub",
+            "Linux Basics"
+          ]
+        },
+        {
+          "title": "Stage 2: Core Technologies",
+          "description": "Master the core technologies for your selected paths: Web Development, Data Science, AI / Machine Learning, Cybersecurity.",
+          "skills": [
+            "HTML5",
+            "CSS3",
+            "JavaScript (ES6+)",
+            "Responsive Design",
+            "Git/GitHub",
+            "Python",
+            "SQL",
+            "Excel/Sheets",
+            "Pandas & NumPy",
+            "Data Visualization",
+            "NumPy & Pandas",
+            "Matplotlib / Seaborn",
+            "Statistics & Probability",
+            "Linear Algebra",
+            "Networking Fundamentals",
+            "Linux & CLI",
+            "Python Scripting",
+            "Security Concepts",
+            "Cryptography"
+          ]
+        },
+        {
+          "title": "Stage 3: Build Projects",
+          "description": "Apply your skills by building real-world projects. Projects are essential for your portfolio.",
+          "skills": [
+            "Portfolio Website",
+            "Full-Stack Blog App",
+            "E-Commerce Frontend",
+            "REST API Backend",
+            "Sales Dashboard",
+            "EDA Project",
+            "Predictive Analytics",
+            "Data Pipeline"
+          ]
+        },
+        {
+          "title": "Stage 4: Advanced Skills",
+          "description": "Level up with advanced concepts and industry-level tools.",
+          "skills": [
+            "React.js / Vue.js",
+            "Node.js + Express",
+            "MongoDB / MySQL",
+            "REST APIs",
+            "Deployment (Netlify/Vercel)",
+            "Power BI / Tableau",
+            "Machine Learning",
+            "Big Data (Spark)",
+            "Statistical Analysis",
+            "Machine Learning (Scikit-learn)",
+            "Deep Learning (TensorFlow/PyTorch)",
+            "NLP Basics",
+            "Model Deployment",
+            "Ethical Hacking",
+            "Web Security (OWASP)",
+            "Penetration Testing",
+            "Security Tools (Wireshark, Nmap)",
+            "Certifications (CEH/CompTIA)"
+          ]
+        },
+        {
+          "title": "Stage 5: Internship & Portfolio",
+          "description": "Build a professional portfolio and gain real experience through internships.",
+          "skills": [
+            "Create GitHub Portfolio",
+            "Build Personal Website",
+            "Write Technical Blog Posts",
+            "Contribute to Open Source",
+            "Apply for Internships",
+            "LinkedIn Profile Optimization",
+            "Build 3-5 Showcase Projects"
+          ]
+        },
+        {
+          "title": "Stage 6: Job Preparation",
+          "description": "Prepare for placements and job applications with targeted preparation.",
+          "skills": [
+            "DSA Practice (LeetCode/HackerRank)",
+            "System Design Basics",
+            "Mock Interviews",
+            "Resume Building",
+            "Aptitude & Reasoning",
+            "Communication Skills",
+            "Company-Specific Preparation",
+            "Networking & Referrals"
+          ]
+        }
+      ],
+      "createdAt": "2026-09-29T17:09:57.662Z"
+    }
+  ]
+}
